@@ -13,7 +13,6 @@ namespace PressYourLuck
     public partial class PressYourLuckForm : Form
     {
         private PictureBox[] tileArray;
-        private Point[] tileLocations;
 
         public PressYourLuckForm()
         {
@@ -21,6 +20,7 @@ namespace PressYourLuck
             tileArray = new PictureBox[8];
         }
 
+        //declare a getter setter
         public ICollection<PictureBox> TileArray => tileArray;
 
         private void GameStart_Click(object sender, EventArgs e)
@@ -40,8 +40,7 @@ namespace PressYourLuck
                         continue;
                     }
                     // create the new picturebox at index location ie tileArray[2]
-                    tileArray[index - offset] = new PictureBox { Location = new Point(j * 50, i * 50), Enabled = true,
-                        Size = new Size(45, 45), SizeMode = PictureBoxSizeMode.StretchImage};
+                    tileArray[index - offset] = new GameTile(new Point(j * 50, i * 50));
                     //add picturebox to form
                     this.Controls.Add(tileArray[index -offset]);
                     //set an image so it can be seen on board
