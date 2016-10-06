@@ -29,12 +29,9 @@ namespace PressYourLuck
         private static int _index;
         private string _file = "..\\..\\luck.txt";
         private static readonly Player[] Player = new Player[2];
-        // private static Player player1 = new Player();
-        //private static Player player2 = new Player();
         private static readonly QA[] QaStructure = new QA[Maxquestions];
         private int _selectedTile;
 
-        //init set instructions create tiles disable some btns
         public PressYourLuckForm()
         {
             InitializeComponent();
@@ -51,7 +48,6 @@ namespace PressYourLuck
                 Player[i] = new Player();
             }
             QuestionBox.Text = @"Press 'start' button to begin.";
-            //Shuffle();
         }
 
         /// <summary>
@@ -75,6 +71,7 @@ namespace PressYourLuck
             stringBuilder.AppendLine("After successfully answering a question use the spin button to attempt to get a prize");
             stringBuilder.AppendLine("Use the stop button to select a tile");
             stringBuilder.AppendLine("Your score is listed in the top right");
+            stringBuilder.AppendLine("first to 10 wins");
 
             Instruction.Text = stringBuilder.ToString();
 
@@ -431,5 +428,30 @@ namespace PressYourLuck
             }
         }
 
+        private void QuitGameBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// prompt when closing
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+
+            // Confirm user wants to close
+            switch (MessageBox.Show(this, @"Are you sure you want to close?", @"Closing", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.No:
+                    e.Cancel = true;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

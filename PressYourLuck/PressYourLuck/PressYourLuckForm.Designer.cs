@@ -49,6 +49,7 @@
             this.Instruction = new System.Windows.Forms.TextBox();
             this.PlayerLabel = new System.Windows.Forms.Label();
             this.ScoreBox = new System.Windows.Forms.TextBox();
+            this.QuitGameBtn = new System.Windows.Forms.Button();
             this.SpinPlayer1.SuspendLayout();
             this.Player1.SuspendLayout();
             this.Player2.SuspendLayout();
@@ -266,11 +267,22 @@
             this.ScoreBox.Size = new System.Drawing.Size(200, 146);
             this.ScoreBox.TabIndex = 13;
             // 
+            // QuitGameBtn
+            // 
+            this.QuitGameBtn.Location = new System.Drawing.Point(960, 603);
+            this.QuitGameBtn.Name = "QuitGameBtn";
+            this.QuitGameBtn.Size = new System.Drawing.Size(93, 44);
+            this.QuitGameBtn.TabIndex = 14;
+            this.QuitGameBtn.Text = "Quit Game";
+            this.QuitGameBtn.UseVisualStyleBackColor = true;
+            this.QuitGameBtn.Click += new System.EventHandler(this.QuitGameBtn_Click);
+            // 
             // PressYourLuckForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 718);
+            this.Controls.Add(this.QuitGameBtn);
             this.Controls.Add(this.ScoreBox);
             this.Controls.Add(this.PlayerLabel);
             this.Controls.Add(this.InstructionBox);
@@ -316,6 +328,7 @@
         private System.Windows.Forms.Label ResultLabel;
         private System.Windows.Forms.Label PlayerLabel;
         private System.Windows.Forms.TextBox ScoreBox;
+        private System.Windows.Forms.Button QuitGameBtn;
     }
 }
 
