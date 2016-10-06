@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pyluck;
 
 namespace PressYourLuck
 {
@@ -17,6 +18,7 @@ namespace PressYourLuck
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PressYourLuckForm());
+            //Application.Run(new QAForm());
         }
     }
 }

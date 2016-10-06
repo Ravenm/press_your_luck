@@ -11,33 +11,33 @@ namespace pyluck
 {
     class QA
     {
-        private string question;
-        private string answer;
+        private string _question;
+        private string _answer;
 
         //constructor
         public QA()
         {
-            question = "";
-            answer = "";
+            _question = "";
+            _answer = "";
         }
 
         public QA(string q,string a)
         {
-            this.question = q;
-            this.answer = a;
+            this._question = q;
+            this._answer = a;
         }
 
         //getters and setters for question and answer
         public string Q
         {
-            get { return question; }
-            set { question = value; }
+            get { return _question; }
+            set { _question = value; }
         }
 
         public string A
         {
-            get { return answer; }
-            set { answer = value; }
+            get { return _answer; }
+            set { _answer = value; }
         }
     }
 }

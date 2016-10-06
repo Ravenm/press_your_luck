@@ -49,6 +49,7 @@
     <Compile Include="GameTile.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Player.cs" />
     <Compile Include="PressYourLuckForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +58,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QA.cs" />
     <EmbeddedResource Include="PressYourLuckForm.resx">
       <DependentUpon>PressYourLuckForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +91,7 @@
     <Content Include="images\mayorWhammy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="luck.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
